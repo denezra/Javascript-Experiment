@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript Experiment 01</title>
+</head>
+<body>
+	<tr>
+		<td>
+			<div id="Object_One"></div>
+		</td>
+		<td>
+			<div id="Object Two"></div>
+		</td>
+		<td>
+			<div id="Object-Three"></div>
+		</td>
+		<td>
+			<div id="Object Four"></div>
+		</td>
+		<td>
+			<div id="Object_Five"></div>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<div id="Image_Object_One"></div>
+		</td>
+		<td>
+			<div id="Image_Object Two"></div>
+		</td>
+		<td>
+			<div id="Image_Object-Three"></div>
+		</td>
+		<td>
+			<div id="Image_Object Four"></div>
+		</td>
+		<td>
+			<div id="Image_Object_Five"></div>
+		</td>
+	</tr>
+	<script>
+		// Version 1
+		// This function get the element id of the html tag
+		function getElem(element) {
+			return document.getElementById(element);
+		}
+		console.log(getElem("Object_One"));
+		getElem("Object_One").style.backgroundColor 		= "red";
+		getElem("Object_One").style.height 							= "100px";
+		getElem("Object_One").style.width 							= "100px";
+
+		getElem("Object Two").style.backgroundColor 		= "green";
+		getElem("Object Two").style.height 							= "100px";
+		getElem("Object Two").style.width 							= "100px";
+
+		getElem("Object-Three").style.backgroundColor 	= "yellow";
+		getElem("Object-Three").style.height 						= "100px";
+		getElem("Object-Three").style.width 						= "100px";
+
+		getElem("Object Four").style.backgroundColor 		= "pink";
+		getElem("Object Four").style.height 						= "100px";
+		getElem("Object Four").style.width 							= "100px";
+
+		getElem("Object_Five").style.backgroundColor 		= "blue";
+		getElem("Object_Five").style.height 						= "100px";
+		getElem("Object_Five").style.width 							= "100px";
+
+		/**
+			Embed image in background object by height, width, and
+			background size.
+			NOTE:
+				- Don't forget the extension of the images
+				- You can resize the images base on the width, height, and background size,
+					but don't forget the aspect ratio of the images.
+				- "px" can be replace to "%", "em", and etc.
+				- On background size you need to give it two values
+					Sample: "(width value), (height value)"
+		 **/
+		function getEmbedImage(element, path, width, height, size) {
+			//csAd.logo_col.style.background 		 	= "url('logo.png')";
+			//element.style.background 	 		= '"url(' + "'" + path + "'" + ')"';
+			element.style.background 			= "url('" + path +"')";
+			element.style.backgroundSize	= size;
+			element.style.height 		 			= height;
+			element.style.width 					= width;
+		}
+
+		getEmbedImage(getElem("Image_Object_One"), "product1_exp.jpg", "123px", "121px", "123px 121px");
+		console.log(getElem("Image_Object_One"));
+
+		getEmbedImage(getElem("Image_Object Two"), "https://placekitten.com/g/200/300", "200px", "300px", "200px 300px");
+
+		getEmbedImage(getElem("Image_Object-Three"), "https://baconmockup.com/1000/250", "1000px", "250px", "1000px 250px");
+
+		getEmbedImage(getElem("Image_Object Four"), "backup.png", "320px", "50px", "320px 50px");
+
+		getEmbedImage(getElem("Image_Object_Five"), "product_col.png", "38px", "61px", "38px 61px");
+
+
+
+	</script>
+</body>
+</html>
