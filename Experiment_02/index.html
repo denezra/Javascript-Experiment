@@ -8,17 +8,19 @@
 	<script>
 		var h 			= document.createElement("h1");
 		var ctr 		= 0;
+		var timer 	= 0;
 		h.innerHTML = ctr;
 		document.body.appendChild(h);
 
 		function setTimer(name, operation, time) {
 			console.log('Set Timer');
 			console.log(name, operation, time);
-			var name = setInterval(function() {
-				operation
+			name = setInterval(function() {
+				console.log('Tick ', operation);
+				JSON.parse(operation);
 			}, time)
 		}
-		setTimer("timer1" , ctr++, 1000)
+		setTimer(timer , 'ctr++', 1000)
 	</script>
 </body>
 </html>
