@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript Experiment 02</title>
+</head>
+<body>
+	<script>
+		var h 			= document.createElement("h1");
+		var ctr 		= 0;
+		h.innerHTML = ctr;
+		document.body.appendChild(h);
+
+		function setTimer(name, operation, time) {
+			console.log('Set Timer');
+			console.log(name, operation, time);
+			var name = setInterval(function() {
+				operation
+			}, time)
+		}
+		setTimer("timer1" , ctr++, 1000)
+	</script>
+</body>
+</html>
