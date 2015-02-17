@@ -11,16 +11,21 @@
 		var timer 	= 0;
 		h.innerHTML = ctr;
 		document.body.appendChild(h);
-
+		/**
+		*	Under Construction...
+		**/
 		function setTimer(name, operation, time) {
 			console.log('Set Timer');
 			console.log(name, operation, time);
-			name = setInterval(function() {
-				console.log('Tick ', operation);
-				JSON.parse(operation);
-			}, time)
+			name = setInterval(operation, time)
 		}
-		setTimer(timer , 'ctr++', 1000)
+		setTimer(timer ,incrementing , 1000)
+
+		function incrementing() {
+			h.innerHTML = ctr;
+			ctr++;
+			console.log('Tick Tock ', ctr)
+		}
 	</script>
 </body>
 </html>
