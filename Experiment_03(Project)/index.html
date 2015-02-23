@@ -4,45 +4,29 @@
 	<meta charset="UTF-8">
 	<title>Javascript Experiment 02</title>
 	<link rel="stylesheet" href="style.css">
-	<style>
-			textarea {
-				resize: vertical;
-			}
-	</style>
 </head>
 <body>
 	<form>
 		<div>
-  		<input type="checkbox" name="api" value="Enabler">Enabler Javascript API
+  		<input type="checkbox" name="api" value="Enabler" id="enabler">Enabler Javascript API
   	</div>
   	<div>
-  		<input type="radio" name="mode" value="Inpage" checked>Inpage
+  		<input type="radio" name="mode" value="Inpage" id="inpage" checked>Inpage
 			<br>
-			<input type="radio" name="mode" value="Expand">Expand
+			<input type="radio" name="mode" value="Expand" id="expand">Expand
 			<br>
   	</div>
   	<div>
-  		<textarea rows="25" cols="50" readonly>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Enter Title Here</title>
-</head>
-<body>
-
-</body>
-</html>
+  		<textarea id="html_textarea" rows="25" cols="80" readonly>
 			</textarea>
   	</div>
   	<div>
-  		<textarea rows="25" cols="50" readonly>
+  		<textarea rows="25" cols="80" readonly>
 			Under Construction for Javascript
 			</textarea>
   	</div>
 	</form>
+	<button id="generate" type="button">Try it</button>
 	<script src="module.js"></script>
 </body>
 </html>

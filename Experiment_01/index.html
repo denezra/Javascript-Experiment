@@ -78,24 +78,22 @@
 					Sample: "(width value), (height value)"
 		 **/
 		function getEmbedImage(element, path, width, height, size) {
-			//csAd.logo_col.style.background 		 	= "url('logo.png')";
-			//element.style.background 	 		= '"url(' + "'" + path + "'" + ')"';
-			element.style.background 			= "url('" + path +"')";
-			element.style.backgroundSize	= size;
-			element.style.height 		 			= height;
-			element.style.width 					= width;
+			getElem(element).style.background 			= "url('" + path +"')";
+			getElem(element).style.backgroundSize	= size;
+			getElem(element).style.height 		 			= height;
+			getElem(element).style.width 					= width;
 		}
 
-		getEmbedImage(getElem("Image_Object_One"), "product1_exp.jpg", "123px", "121px", "123px 121px");
+		getEmbedImage("Image_Object_One", "product1_exp.jpg", "123px", "121px", "123px 121px");
 		console.log(getElem("Image_Object_One"));
 
-		getEmbedImage(getElem("Image_Object Two"), "https://placekitten.com/g/200/300", "200px", "300px", "200px 300px");
+		getEmbedImage("Image_Object Two", "https://placekitten.com/g/200/300", "200px", "300px", "200px 300px");
 
-		getEmbedImage(getElem("Image_Object-Three"), "https://baconmockup.com/1000/250", "1000px", "250px", "1000px 250px");
+		getEmbedImage("Image_Object-Three", "https://baconmockup.com/1000/250", "1000px", "250px", "1000px 250px");
 
-		getEmbedImage(getElem("Image_Object Four"), "backup.png", "320px", "50px", "320px 50px");
+		getEmbedImage("Image_Object Four", "backup.png", "320px", "50px", "320px 50px");
 
-		getEmbedImage(getElem("Image_Object_Five"), "product_col.png", "38px", "61px", "38px 61px");
+		getEmbedImage("Image_Object_Five", "product_col.png", "38px", "61px", "38px 61px");
 
 
 
