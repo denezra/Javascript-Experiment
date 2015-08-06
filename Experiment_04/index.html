@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript Experiment 02</title>
+</head>
+<body>
+	<script>
+		'use strict';
+		var h 		= document.createElement("h1");
+		var ctr 	= 0;
+		var timer 	= 0;
+		h.innerHTML = ctr;
+		document.body.appendChild(h);
+		/**
+		*	Under Construction...
+		**/
+		function flowTimeline(name, operation, time, callback) {
+			name = setTimeout(function(){eval(operation);callback();}, time)
+		}
+		flowTimeline(timer ,'ctr++; h.innerHTML = ctr;', 1000, endedTimer)
+
+		function endedTimer() {alert('Timer Ended');}
+	</script>
+</body>
+</html>
